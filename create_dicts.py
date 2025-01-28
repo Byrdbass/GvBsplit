@@ -1,3 +1,4 @@
+import json
 
 def parse_file_to_dicts(file_path):
     """Parses a text file into an array of dictionaries with track, artist, title, and time."""
@@ -29,4 +30,6 @@ def parse_file_to_dicts(file_path):
     return result
 
 array_of_dicts = parse_file_to_dicts('playlist.txt')
+with open('playlist.json', 'w') as json_file:
+    json.dump(array_of_dicts, json_file, indent=4)
 print(array_of_dicts)
