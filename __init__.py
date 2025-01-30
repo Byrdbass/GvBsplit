@@ -1,47 +1,59 @@
 from pydub import AudioSegment
 import json
+import os
 # import ffmpeg
 # import math
 
 input_file = 'playlist.json'
 
 # fix segment or segment length
-def split_audio(file_path, segment_length):
+def split_audio(file_path):
     playlistMix = AudioSegment.from_mp3(file_path)
     with open(input_file, 'r') as json_file:
         data = json.load(json_file)
-    # total_length = 300000 #5min
-    print(data)
 
-    previous_endDuration = 0
-    for index, song in enumerate(data):
+    playlistMix_duration = len(playlistMix)
+
+    #for file paths that llok like /Users/ByrdBass/Desktop/Musick/Music/various/DECEMBER 2013/GvsB Dec 2013.mp3
+    file_parts = file_path.split('/various/')
+    album = file_parts[1].split('/')[0] if len(file_parts) > 1 else "Album_Not_Extracted"
+    export_folder = f"/Users/ByrdBass/Desktop/Musick/Music/GvsB-Tracks/{album}" 
+    os.makedirs(export_folder, exist_ok=True)
+
+    for i, song in enumerate(data):
         track = song['track']
         artist = song['artist']
         title = song['title']
 
-        # parse the data into seconds
-        time_string = song['time']
-        time_parts = list(map(int, time_string.split(':')))
-        print(f"Time parts {time_parts}")
+        time_string_start = song['time']
+        time_parts_start = list(map(int, time_string_start.split(':')))
+        time_string_end = data[i + 1]['time'] if i + 1 < len(data) else None
+        if time_string_end != None:
+            time_parts_end = list(map(int, time_string_end.split(':')))
+            if len(time_parts_end) == 3:
+                hours, minutes, seconds = time_parts_start
+                end_time = (hours * 3600 + minutes * 60 + seconds) * 1000
+            else: 
+                minutes, seconds = time_parts_end
+                end_time = (minutes * 60 + seconds) * 1000
+        else:
+            time_parts_end = playlistMix_duration
 
-        # Check if the time includes hours
-        if len(time_parts) == 3:
-            hours, minutes, seconds = time_parts
-            endDuration = hours * 3600 + minutes * 60 + seconds
-        else:  # Assume it's MM:SS
-            minutes, seconds = time_parts
-            endDuration = minutes * 60 + seconds
 
-        start_time = previous_endDuration #- end duration of previous song
-        end_time = endDuration
+        if len(time_parts_start) == 3:
+            hours, minutes, seconds = time_parts_start
+            start_time = (hours * 3600 + minutes * 60 + seconds) * 1000
+        else:  
+            minutes, seconds = time_parts_start
+            start_time = (minutes * 60 + seconds) * 1000
 
-        previous_endDuration = endDuration
 
-        segment = playlistMix[start_time:end_time]
-        
-        output_file = f"{title} by {artist} from {file_path[:-4]} #{track}.mp3"
-        segment.export(output_file, format="mp3")
-        print(f"Song {title} was {time_string} or {endDuration} seconds long")
+
+        segment = playlistMix[start_time:end_time] #slicing specific to pydub library
+
+        output_file = f"{title} by {artist} from {album} #{track}.mp3"
+        segment.export(output_file, format="mp3", tags={'title': title, 'artist': artist, 'album': album})
+        print(f"Song {title} was {time_string_start} or {end_time/1000} seconds long at index {i}")
         print(f"Exported: {output_file}")
 
 file_mp3 = r"/Users/ByrdBass/Desktop/Musick/Music/various/DECEMBER 2013/GvsB Dec 2013.mp3"
