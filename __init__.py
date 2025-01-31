@@ -53,7 +53,8 @@ def split_audio(file_path):
         segment = playlistMix[start_time:end_time] #slicing specific to pydub library
         output_file = f"{title} by {artist} from {album} #{track}.mp3"
         Path(export_folder).mkdir(parents=True, exist_ok=True)
-        segment.export(f"{export_folder}/{output_file}", 
+        output_path = os.path.join(export_folder, output_file)
+        segment.export(output_path, 
                        format="mp3", 
                        tags={'title': title, 
                              'artist': artist, 
