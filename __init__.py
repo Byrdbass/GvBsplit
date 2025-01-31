@@ -18,7 +18,13 @@ def split_audio(file_path):
 
     #for file paths that llok like /Users/ByrdBass/Desktop/Musick/Music/various/DECEMBER 2013/GvsB Dec 2013.mp3
     file_parts = file_path.split('/various/')
-    album = file_parts[1].split('/')[0] if len(file_parts) > 1 else "Album_Not_Extracted"
+    mix_month_year = file_parts[1].split('/')[0] if len(file_parts) > 1 else "Album_Not_Extracted"
+    album_parts = mix_month_year.split()
+    if len(album_parts):
+        month, year = album_parts
+        formatted_month = month.capitalize()[:3]
+        album = f"{formatted_month} {year}"
+        
     export_folder = f"/Users/ByrdBass/Desktop/Musick/Music/GvsB-Tracks/{album}" 
 
     for i, song in enumerate(data):
@@ -56,10 +62,12 @@ def split_audio(file_path):
         output_path = os.path.join(export_folder, output_file)
         segment.export(output_path, 
                        format="mp3", 
+                       bitrate='320k',
                        tags={'title': title, 
                              'artist': artist, 
                              'album': album, 
-                             'duration': duration})
+                             'duration': duration,
+                             'year': year})
         print(f"Song {title} was {time_string_start} and ended at {format((end_time/1000)/60, '.2f')} minutes at index {i}")
         print(f"Exported: {output_file}")
 
