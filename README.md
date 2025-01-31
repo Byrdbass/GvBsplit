@@ -6,3 +6,4 @@ a script used to split long DJ mixes into individual songs
 - [pydub](https://github.com/jiaaro/pydub)
 - include ffmpeg and simpleaudio from above #installation
 - [make directory issue](https://stackoverflow.com/questions/61286301/pydub-cant-save-file-in-a-different-directory-properly)
+- [running scripts concurrently](https://stackoverflow.com/questions/53865580/run-multiple-python-file-concurrently)

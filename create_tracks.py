@@ -1,10 +1,15 @@
+import sys
 from pydub import AudioSegment
 import json
 import os
 import math
 from pathlib import Path
-# import ffmpeg
-# import math
+
+if len(sys.argv) < 2:
+    print("Error: missing file_mp3 name in main script")
+    sys.exit(1)
+
+file_mp3 = sys.argv[1]
 
 input_file = 'playlist.json'
 
@@ -35,10 +40,11 @@ def split_audio(file_path):
         time_string_start = song['time']
         time_parts_start = list(map(int, time_string_start.split(':')))
         time_string_end = data[i + 1]['time'] if i +1 < len(data) else None
+        print(f"Start at {time_string_start} end at {time_string_end}" )
         if time_string_end != None:
             time_parts_end = list(map(int, time_string_end.split(':')))
             if len(time_parts_end) == 3:
-                hours, minutes, seconds = time_parts_start
+                hours, minutes, seconds = time_parts_end
                 end_time = (hours * 3600 + minutes * 60 + seconds) * 1000
             else: 
                 minutes, seconds = time_parts_end
@@ -50,9 +56,11 @@ def split_audio(file_path):
         if len(time_parts_start) == 3:
             hours, minutes, seconds = time_parts_start
             start_time = (hours * 3600 + minutes * 60 + seconds) * 1000
-        else:  
+        elif len(time_parts_start) == 2:  
             minutes, seconds = time_parts_start
             start_time = (minutes * 60 + seconds) * 1000
+        else:
+            raise ValueError(f"Unexpected time format: {time_string_start}")
 
         duration = end_time - start_time
 
@@ -66,10 +74,10 @@ def split_audio(file_path):
                        tags={'title': title, 
                              'artist': artist, 
                              'album': album, 
-                             'duration': duration,
-                             'year': year})
+                             'duration': duration},
+                        cover='/Users/ByrdBass/Desktop/Musick/Music/various/BestOf 2015/GvsB-2015-YEAR-END-MIX.jpg'
+                        )
         print(f"Song {title} was {time_string_start} and ended at {format((end_time/1000)/60, '.2f')} minutes at index {i}")
         print(f"Exported: {output_file}")
 
-file_mp3 = r"/Users/ByrdBass/Desktop/Musick/Music/various/DECEMBER 2013/GvsB Dec 2013.mp3"
 split_audio(file_mp3)
