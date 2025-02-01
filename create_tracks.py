@@ -38,6 +38,9 @@ def split_audio(file_path, cover_art):
         formatted_month = month.capitalize()[:3]
         album = f"{formatted_month} {year}"
         
+    album_file = 'recent_album.json'
+    with open(album_file, 'w') as f:
+        json.dump({'album': album}, f)
     export_folder = f"/Users/ByrdBass/Desktop/Musick/Music/GvsB-Tracks/{album}" 
 
     for i, song in enumerate(data):
