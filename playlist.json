@@ -1,116 +1,80 @@
 [
     {
         "track": "01",
-        "artist": "LANA DEL REY",
-        "title": "honeymoon hotline (burnt norton)",
+        "artist": "Dean Blunt & Joanne Robertson",
+        "title": "love me thru this",
         "time": "00:00"
     },
     {
         "track": "02",
-        "artist": "JAMIE XX",
-        "title": "gosh",
-        "time": "01:24"
+        "artist": "Burial",
+        "title": "come down to us",
+        "time": "01:01"
     },
     {
         "track": "03",
-        "artist": "PLASTIXX",
-        "title": "goodbye",
-        "time": "06:04"
+        "artist": "Flying Lotus",
+        "title": "hide me (feat. shabazz palaces)",
+        "time": "03:34"
     },
     {
         "track": "04",
-        "artist": "YEARS AND YEARS",
-        "title": "shine (danny l harle remix)",
-        "time": "08:00"
+        "artist": "Four Tet x Grimes",
+        "title": "human once again",
+        "time": "04:59"
     },
     {
         "track": "05",
-        "artist": "FATIMA YAMAHA",
-        "title": "what's a girl to do",
-        "time": "11:20"
+        "artist": "Tinashe",
+        "title": "middle of nowhere",
+        "time": "10:09"
     },
     {
         "track": "06",
-        "artist": "ANTHONY NAPLES",
-        "title": "pale",
-        "time": "14:14"
+        "artist": "Clams Casino",
+        "title": "haunt",
+        "time": "13:10"
     },
     {
         "track": "07",
-        "artist": "METRO THUGGIN",
-        "title": "free gucci",
-        "time": "15:29"
+        "artist": "Ryan Hemsworth",
+        "title": "lorde - ribs (let's have a sleepover version)",
+        "time": "15:39"
     },
     {
         "track": "08",
-        "artist": "BICEP",
-        "title": "just",
-        "time": "19:24"
+        "artist": "Jo\u00e3o Gilberto & Astrud Gilberto",
+        "title": "corcovado (jerome lol edit)",
+        "time": "18:49"
     },
     {
         "track": "09",
-        "artist": "FLORENCE + THE MACHINE",
-        "title": "what kind of man (nicolas jaar remix)",
-        "time": "24:41"
+        "artist": "CEO",
+        "title": "my liquor",
+        "time": "22:22"
     },
     {
         "track": "10",
-        "artist": "ADELE",
-        "title": "hello (DJDS remix)",
-        "time": "36:31"
+        "artist": "Miley Cyrus",
+        "title": "wrecking ball (meth dad remix)",
+        "time": "24:36"
     },
     {
         "track": "11",
-        "artist": "JACK J",
-        "title": "thirstin'",
-        "time": "42:45"
+        "artist": "Ryan Hemsworth",
+        "title": "chief keef - citgo (hisaishi-fied version)",
+        "time": "28:23"
     },
     {
         "track": "12",
-        "artist": "JACK \u00dc X POST MALONE",
-        "title": "where r \u00fc iverson",
-        "time": "48:00"
+        "artist": "SELA.",
+        "title": "heartbeat (feat. allie)",
+        "time": "30:24"
     },
     {
         "track": "13",
-        "artist": "ILOVEMAKONNEN",
-        "title": "tuesday (shash'u remix)",
-        "time": "52:01"
-    },
-    {
-        "track": "14",
-        "artist": "YOUNG THUG",
-        "title": "raw (might just)",
-        "time": "55:55"
-    },
-    {
-        "track": "15",
-        "artist": "SOPHIE",
-        "title": "just like we never said goodbye",
-        "time": "59:23"
-    },
-    {
-        "track": "16",
-        "artist": "CARLY RAE JEPSEN",
-        "title": "run away with me (cyril hahn remix)",
-        "time": "1:02:08"
-    },
-    {
-        "track": "17",
-        "artist": "CHROMATICS",
-        "title": "shadow",
-        "time": "1:06:30"
-    },
-    {
-        "track": "18",
-        "artist": "U.S. GIRLS",
-        "title": "window shades",
-        "time": "1:10:05"
-    },
-    {
-        "track": "19",
-        "artist": "GRIMES",
-        "title": "REALiTi (demo)",
-        "time": "1:14:39"
+        "artist": "Flying Lotus",
+        "title": "wake me",
+        "time": "34:30"
     }
 ]

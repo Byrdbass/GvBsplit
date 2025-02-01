@@ -10,11 +10,19 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 file_mp3 = sys.argv[1]
-
+cover_art = sys.argv[2]
 input_file = 'playlist.json'
 
+if not os.path.isfile(file_mp3):
+    print(f"THE PROVIDED FILE IS NOT AN MP3 FILE")
+    sys.exit(1)
+
+if not os.path.isfile(cover_art):
+    print("THE PROVIDED COVER ART IS NOT A JPG")
+    sys.exit(1)
+
 # fix segment or segment length
-def split_audio(file_path):
+def split_audio(file_path, cover_art):
     playlistMix = AudioSegment.from_mp3(file_path)
     with open(input_file, 'r') as json_file:
         data = json.load(json_file)
@@ -75,9 +83,9 @@ def split_audio(file_path):
                              'artist': artist, 
                              'album': album, 
                              'duration': duration},
-                        cover='/Users/ByrdBass/Desktop/Musick/Music/various/BestOf 2015/GvsB-2015-YEAR-END-MIX.jpg'
+                        cover=cover_art
                         )
         print(f"Song {title} was {time_string_start} and ended at {format((end_time/1000)/60, '.2f')} minutes at index {i}")
         print(f"Exported: {output_file}")
 
-split_audio(file_mp3)
+split_audio(file_mp3, cover_art)
