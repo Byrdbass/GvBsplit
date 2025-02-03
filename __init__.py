@@ -1,9 +1,9 @@
 import subprocess
 
 root_dir = '/Users/ByrdBass/Desktop/Musick/Music/various/'
-month_dir = 'FEBRUARY 2014'
-file_mp3 = f'{root_dir}{month_dir}/GORILLA vs BEAR FEBRUARY 2014.mp3'
-cover_art = f'{root_dir}{month_dir}/GvsB-FEBRUARY-2014-575x575.jpg'
+month_dir = 'august 2011/'
+file_mp3 = f'{root_dir}{month_dir}august 2011.mp3'
+cover_art = f'{root_dir}{month_dir}GVSB-AUGUST-20111.jpg'
 
 create_dicts = subprocess.Popen(["python", "create_dicts.py"])
 create_dicts.wait()

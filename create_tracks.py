@@ -24,7 +24,7 @@ if not os.path.isfile(cover_art):
 # fix segment or segment length
 def split_audio(file_path, cover_art):
     playlistMix = AudioSegment.from_mp3(file_path)
-    with open(input_file, 'r') as json_file:
+    with open(input_file, 'r', encoding='utf-8') as json_file:
         data = json.load(json_file)
 
     playlistMix_duration = len(playlistMix) - 1000
