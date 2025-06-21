@@ -3,9 +3,9 @@ import sys
 
 root_dir = '/Users/ByrdBass/Desktop/Musick/Music/various/'
 #FORMAT SHOULD BE "MONTH YEAR"
-month_dir = 'JUNE 2011/' #make sure this ends in a slash
-file_mp3 = f'{root_dir}{month_dir}june 2011.mp3'
-cover_art = f'{root_dir}{month_dir}GVSB-JUNE-2011-MIX.jpg'
+month_dir = 'JULY 2014/' #make sure this ends in a slash
+file_mp3 = f'{root_dir}{month_dir}GORILLA VS BEAR JULY 2014.mp3'
+cover_art = f'{root_dir}{month_dir}gvsb_july2014_b-575x575.jpg'
 
 try:
     # Run first two sequentially - will raise exception if either fails
