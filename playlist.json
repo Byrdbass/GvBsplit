@@ -1,110 +1,86 @@
 [
     {
         "track": "01",
-        "artist": "Air France",
-        "title": "it feels good to be around you",
+        "artist": "memory tapes",
+        "title": "fell thru ice II",
         "time": "00:00"
     },
     {
         "track": "02",
-        "artist": "Slow Magic",
-        "title": "corvette cassette",
-        "time": "03:59"
+        "artist": "balam acab",
+        "title": "oh, why",
+        "time": "03:00"
     },
     {
         "track": "03",
-        "artist": "Balam Acab",
-        "title": "motion",
-        "time": "07:15"
+        "artist": "flying lotus x stereolab",
+        "title": "galactagon",
+        "time": "06:52"
     },
     {
         "track": "04",
-        "artist": "Ghost Town DJs",
-        "title": "my boo (balam acab remix)",
-        "time": "11:04"
+        "artist": "blood diamonds",
+        "title": "grins",
+        "time": "08:35"
     },
     {
         "track": "05",
-        "artist": "ASAP Rocky",
-        "title": "peso",
-        "time": "14:23"
+        "artist": "jamie xx",
+        "title": "far nearer",
+        "time": "12:23"
     },
     {
         "track": "06",
-        "artist": "SLEEP \u221e OVER",
-        "title": "romantic streams (balam acab remix)",
-        "time": "17:04"
+        "artist": "don, joe & eldon",
+        "title": "take it",
+        "time": "18:43"
     },
     {
         "track": "07",
-        "artist": "Active Child",
-        "title": "hanging on (white sea remix)",
-        "time": "21:21"
+        "artist": "pure x",
+        "title": "dry ice",
+        "time": "21:18"
     },
     {
         "track": "08",
-        "artist": "SBTRKT",
-        "title": "wildfire (drumma boy remix feat. shabazz palaces)",
-        "time": "25:16"
+        "artist": "hotel mexico",
+        "title": "dear les friends",
+        "time": "25:07"
     },
     {
         "track": "09",
-        "artist": "Keep Shelly in Athens",
-        "title": "our own dream",
-        "time": "28:09"
+        "artist": "ford & lopatin",
+        "title": "too much MIDI (please forgive me)",
+        "time": "29:22"
     },
     {
         "track": "10",
-        "artist": "Lemonade",
-        "title": "the place where you belong (shai cover)",
-        "time": "32:53"
+        "artist": "charli XCX",
+        "title": "stay away",
+        "time": "33:34"
     },
     {
         "track": "11",
-        "artist": "Purity Ring",
-        "title": "belispeak",
-        "time": "37:50"
+        "artist": "bleached",
+        "title": "think of you",
+        "time": "37:15"
     },
     {
         "track": "12",
-        "artist": "Main Attrakionz",
-        "title": "take 1 feat. ASAP rocky (prod. by clams casino)",
-        "time": "40:42"
+        "artist": "twin sister",
+        "title": "bad street",
+        "time": "39:51"
     },
     {
         "track": "13",
-        "artist": "Inga Copeland",
-        "title": "u gotta respect yrself before i can",
-        "time": "45:08"
+        "artist": "washed out",
+        "title": "eyes be closed (grimes remix)",
+        "time": "44:32"
     },
     {
         "track": "14",
-        "artist": "Atlas Sound",
-        "title": "terra incognita",
-        "time": "46:06"
-    },
-    {
-        "track": "15",
-        "artist": "The Weeknd",
-        "title": "lonely star",
-        "time": "52:23"
-    },
-    {
-        "track": "16",
-        "artist": "jj",
-        "title": "you don't know how much it would hurt me if you said that you were in love with me",
-        "time": "58:06"
-    },
-    {
-        "track": "17",
-        "artist": "Cass McCombs",
-        "title": "the same thing",
-        "time": "1:02:33"
-    },
-    {
-        "track": "18",
-        "artist": "Britney Spears",
-        "title": "til the world ends (korallreven version)",
-        "time": "1:08:40"
+        "artist": "washed out",
+        "title": "amor fati",
+        "time": "49:15"
     }
 ]

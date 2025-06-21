@@ -89,6 +89,6 @@ def split_audio(file_path, cover_art):
                         cover=cover_art
                         )
         print(f"Song {title} was {time_string_start} and ended at {format((end_time/1000)/60, '.2f')} minutes at index {i}")
-        print(f"Exported: {output_file}")
+        print(f"Exported: {output_file} \n")
 
 split_audio(file_mp3, cover_art)
